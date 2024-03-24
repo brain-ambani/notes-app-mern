@@ -2,7 +2,10 @@ const Navbar = () => {
   return (
     <div className="mt-10 flex gap-4 justify-between py-4 items-center">
       <div>
-        <h1 className="text-3xl cursor-pointer">Note Zipper</h1>
+        <h1 className="text-3xl cursor-pointer">
+          Note
+          <span className="text-primary">Zipper</span>
+        </h1>
       </div>
       <div>
         <input
