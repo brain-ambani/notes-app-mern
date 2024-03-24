@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Header = () => {
   return (
     <div className="mx-auto max-w-md text-center lg:flex-auto py-32">
@@ -9,9 +11,11 @@ export const Header = () => {
         Streamline note-taking: Create, edit, delete effortlessly with our
         intuitive notes app. Organize your thoughts seamlessly.
       </p>
-      <button className="btn btn-primary mt-10 text-white text-lg">
-        Create new note
-      </button>
+      <Link to="/new-note">
+        <button className="btn btn-primary mt-10 text-white text-lg">
+          Create new note
+        </button>
+      </Link>
     </div>
   );
 };

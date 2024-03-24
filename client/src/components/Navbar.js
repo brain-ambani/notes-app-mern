@@ -1,11 +1,15 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div className="mt-10 flex gap-4 justify-between py-4 items-center">
       <div>
-        <h1 className="text-3xl cursor-pointer">
-          Note
-          <span className="text-primary">Zipper</span>
-        </h1>
+        <Link to="/">
+          <h1 className="text-3xl cursor-pointer">
+            Note
+            <span className="text-primary">Zipper</span>
+          </h1>
+        </Link>
       </div>
       <div>
         <input
@@ -15,7 +19,9 @@ const Navbar = () => {
         />
       </div>
       <div className="flex gap-3">
-        <div className="">My notes</div>
+        <Link to="/notes">
+          <div className="">My notes</div>
+        </Link>
         <div>profile</div>
       </div>
     </div>
