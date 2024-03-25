@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="mt-10 flex gap-4 justify-between py-4 items-center">
+    <div className=" flex gap-4 justify-between py-6 px-2 sm:px-0 items-center sticky top-0 z-10 bg-base-100 mx-3">
       <div>
         <Link to="/">
           <h1 className="text-3xl cursor-pointer">
@@ -11,8 +11,8 @@ const Navbar = () => {
           </h1>
         </Link>
       </div>
-      <div>
-        <label className="input input-bordered flex items-center gap-2">
+      <div className="hidden sm:block">
+        <label className="input input-bordered flex items-center gap-2 ">
           <input type="text" className="grow" placeholder="Search" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
