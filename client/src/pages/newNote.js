@@ -1,6 +1,6 @@
 const NewNote = () => {
   return (
-    <form className="w-3/4 mt-8 flex flex-col items-start justify-items-start">
+    <form className="w-3/4 mt-8 flex flex-col items-center sm:items-start ">
       <input
         type="text"
         placeholder="Title"
