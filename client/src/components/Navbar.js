@@ -28,11 +28,15 @@ const Navbar = () => {
           </svg>
         </label>
       </div>
-      <div className="flex gap-3">
+      <div className="flex gap-5 items-center">
         <Link to="/notes">
-          <div className="">My notes</div>
+          <button className="btn btn-active">notes</button>
         </Link>
-        <div>profile</div>
+        <div className="avatar cursor-pointer">
+          <div className="w-12 rounded-full">
+            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          </div>
+        </div>
       </div>
     </div>
   );
