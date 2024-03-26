@@ -1,12 +1,12 @@
 const express = require("express");
-import { Note } from "../models/noteModel.js";
-import {
+
+const {
   createNote,
   getNotes,
   getSingleNote,
   updateNote,
   deleteNote,
-} from "../controllers/notesController.js";
+} = require("../controllers/notesController");
 
 const router = express.Router();
 
@@ -24,3 +24,5 @@ router.patch("/:id", updateNote);
 
 // Route to delete a note
 router.delete("/:id", deleteNote);
+
+module.exports = router;

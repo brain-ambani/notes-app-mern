@@ -1,5 +1,5 @@
-import { Note } from "../models/noteModel.js";
-import mongoose from "mongoose";
+const Note = require("../models/noteModel");
+const mongoose = require("mongoose");
 
 // Function to create a note
 const createNote = async (req, res) => {
@@ -62,4 +62,10 @@ const deleteNote = async (req, res) => {
   return res.status(200).json(note);
 };
 
-export { createNote, getNotes, getSingleNote, updateNote, deleteNote };
+module.exports = {
+  createNote,
+  getNotes,
+  getSingleNote,
+  updateNote,
+  deleteNote,
+};
