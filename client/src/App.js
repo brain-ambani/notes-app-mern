@@ -11,7 +11,7 @@ function App() {
     <div className="container mx-auto flex flex-col min-h-screen">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Header />} />
+        <Route path="/" element={<Header />} exact />
         <Route path="/new-note" element={<NewNote />} />
         <Route path="/notes" element={<Notes />} />
       </Routes>

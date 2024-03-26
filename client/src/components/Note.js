@@ -1,4 +1,15 @@
 const Note = () => {
+  const deleteNote = (id) => {
+    if (window.confirm("Are you sure you want to delete this note?")) {
+      // fetch(`/api/notes/${id}`, {
+      //   method: "DELETE",
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     console.log(data);
+      //   });
+    }
+  };
   return (
     <div className="card w-3/4 bg-base-100 shadow-xl mt-4 ">
       <div className="card-body">
@@ -13,7 +24,12 @@ const Note = () => {
         </p>
         <div className="card-actions justify-end">
           <button className="btn btn-outline btn-primary">Update</button>
-          <button className="btn btn-outline btn-warning">Delete</button>
+          <button
+            onClick={() => deleteNote()}
+            className="btn btn-outline btn-warning"
+          >
+            Delete
+          </button>
         </div>
       </div>
     </div>
