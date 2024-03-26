@@ -8,9 +8,10 @@ dotenv.config();
 const PORT = process.env.PORT || 5000;
 const MONGODB = process.env.MONGODB_URI;
 
-app.get("/", (req, res) => {
-  res.json({ message: "Hello World" });
-});
+// Middleware for parsing JSON data
+app.use(express.json());
+
+app.use("/api/notes/", notesRoute);
 
 mongoose
   .connect(MONGODB)
