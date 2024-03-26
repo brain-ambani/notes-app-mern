@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const notesRoute = require("./routes/notesRoute");
+const cors = require("cors");
 
 const app = express();
 dotenv.config();
@@ -16,6 +17,9 @@ app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
 });
+
+// Middleware for handling CORS
+app.use(cors());
 
 // routes
 app.use("/api/notes", notesRoute);
