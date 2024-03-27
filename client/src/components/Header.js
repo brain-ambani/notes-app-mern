@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
-
+// import { useNavigate } from "react-router-dom";
 export const Header = () => {
+  // const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   const userInfo = localStorage.getItem("userInfo");
+  //   if (userInfo) {
+  //     navigate("/");
+  //   }
+  // }, [navigate]);
   return (
     <div className="mx-auto max-w-md text-center lg:flex-auto py-32">
       <h2 className="text-4xl font-semi-bold py-4">

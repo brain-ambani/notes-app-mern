@@ -1,22 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Spinner from "../components/Spinner";
 import ErrorMessage from "../components/ErrorMessage";
-import { useNavigate } from "react-router-dom";
 
 const Login = ({ history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
-
-  console.log(history);
-  useEffect(() => {
-    const userInfo = localStorage.getItem("userInfo");
-    if (userInfo) {
-      navigate("/");
-    }
-  }, [navigate]);
 
   const submitHandler = async (e) => {
     e.preventDefault();
