@@ -9,7 +9,7 @@ const createNote = async (req, res) => {
     const note = await Note.create({ title, content });
     res.status(201).json(note);
   } catch (error) {
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: error.message });
   }
 };
 

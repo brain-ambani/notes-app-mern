@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const notesRoute = require("./routes/notesRoute");
+const userRoute = require("./routes/userRoute");
 const cors = require("cors");
 
 const app = express();
@@ -23,6 +24,8 @@ app.use(cors());
 
 // routes
 app.use("/api/notes", notesRoute);
+
+app.use("/api/users", userRoute);
 
 // connect to DB
 mongoose
