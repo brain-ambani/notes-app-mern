@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import NewNote from "./pages/newNote";
 import Notes from "./pages/notes";
 import { Footer } from "./components/Footer";
+import Login from "./pages/login";
+import Register from "./pages/register";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Header />} exact />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/new-note" element={<NewNote />} />
         <Route path="/notes" element={<Notes />} />
       </Routes>
