@@ -16,4 +16,21 @@ const registerUser = async (req, res) => {
   }
 };
 
-module.exports = { registerUser };
+// Function to login a user
+const loginUser = async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await User.findOne({ email });
+
+  if (user && (await user.matchPassword(password))) {
+    res.json({
+      _id: user._id,
+      username: user.username,
+      email: user.email,
+    });
+  } else {
+    res.status(401).json({ error: "Invalid email or password" });
+  }
+};
+
+module.exports = { registerUser, loginUser };
