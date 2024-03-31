@@ -1,1 +1,1 @@
-## A mern notes app with authentication.
+## A mern notes app covering crud with authentication.
