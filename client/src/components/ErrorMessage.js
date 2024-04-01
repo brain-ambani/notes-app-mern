@@ -1,3 +1,5 @@
+import { Children } from "react";
+
 const ErrorMessage = ({ children }) => {
   return (
     <div role="alert" className="alert alert-error">
@@ -14,7 +16,7 @@ const ErrorMessage = ({ children }) => {
           d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
-      <span>{children}</span>
+      <span>{Children}</span>
     </div>
   );
 };

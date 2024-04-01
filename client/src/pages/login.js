@@ -41,7 +41,7 @@ const Login = ({ history }) => {
         {error && <ErrorMessage>{error}</ErrorMessage>}
         {loading && <Spinner />}
         <form onSubmit={submitHandler}>
-          <label className="input input-bordered flex items-center gap-2 w-full">
+          <label className="input input-bordered flex items-center gap-2 w-full mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -53,14 +53,14 @@ const Login = ({ history }) => {
             </svg>
             <input
               type="email"
-              className="grow"
+              className="grow "
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
 
-          <label className="input input-bordered flex items-center gap-2 w-full">
+          <label className="input input-bordered flex items-center gap-2 w-full mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
